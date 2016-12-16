@@ -6,9 +6,13 @@ environment:
   - nodejs_version: "6"
 
 install:
+  - ps: Install-Product node $env:nodejs_version
   - netsh advfirewall firewall add rule name="Open Port 8008" dir=in action=allow protocol=TCP localport=8008
+  - npm -g install npm
+  - set PATH=%APPDATA%\npm;%PATH%
   - npm install -g purplecabbage/cordova-paramedic
   - npm install -g cordova
+#   - npm install --msvs_version=2013
 
 build: off
 
@@ -17,4 +21,5 @@ test_script:
   - npm --version
   - msbuild /version
   - cordova --version
+  - npm test
   - cordova-paramedic --platform android
