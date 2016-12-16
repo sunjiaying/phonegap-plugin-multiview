@@ -21,5 +21,6 @@ test_script:
   - npm --version
   - msbuild /version
   - cordova --version
+  - npm install
   - npm test
   - cordova-paramedic --platform android
