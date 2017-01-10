@@ -64,7 +64,10 @@ module.exports = {
 	},
 	dismissView:function(win, fail, args) {
 		console.log("dismissView proxy called with " + args);
-	}
+	},
+    getMessage:function(win,fail,args) {
+        console.log("getMessage proxy called with " + args);
+    }
 };
 
 require("cordova/exec/proxy").add("PGMultiView", module.exports);
