@@ -21,6 +21,10 @@
     }
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 @end
 
 
@@ -55,7 +59,7 @@
     }
     else
     {
-        navigationController.navigationBarHidden = NO;
+        navigationController.navigationBarHidden = YES; //NO;
     }
 }
 
@@ -93,8 +97,8 @@
         nav.delegate = self;
         self.webView.window.rootViewController = nav;
         [nav pushViewController:self.viewController animated:NO];
-        nav.hidesBarsOnSwipe  = YES;
-        nav.hidesBarsOnTap = YES;
+//        nav.hidesBarsOnSwipe  = YES;
+//        nav.hidesBarsOnTap = YES;
     }
 
     [self.viewController.navigationController pushViewController:childViewController animated:YES];
