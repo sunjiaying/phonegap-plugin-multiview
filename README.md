@@ -32,14 +32,13 @@ $ cordova run iOS (or) cordova run android
 The Demo application illustrates the passing of data between a parent-view and child-view, however the API provides support for 
 *multiple* views in a stack.  Each additional view must have it's own JavaScript file that corresponds with native portions of the plugin.
 
-## Installation Instructions
+## Jam Zhang's Modification
+I have hidden the NavigationBar because I have it in my own HTML5 UI. But everytime I it will add a StatusBar to the root view. I am still looking for a way to work out.
 
-    // fork, clone and install from you local repo, or 
-    // install it from npm, using phonegap cli
-    phonegap plugin add phonegap-plugin-multiview
+## Installation Instructions
     
     // or cordova cli
-    cordova plugin add phonegap-plugin-multiview
+    cordova plugin add https://github.com/jammind/phonegap-plugin-multiview
 
 ## Quickstart Guide to Using the MultiView Plugin
 
