@@ -8,8 +8,8 @@
     <description>Multiple Views for PhoneGap apps</description>
     <license>Apache 2.0</license>
     <keywords>cordova,phonegap,multiview</keywords>
-    <repo>https://github.com/purplecabbage/phonegap-plugin-multiview</repo>
-    <issue>https://github.com/purplecabbage/phonegap-plugin-multiview/issues</issue>
+    <repo>https://github.com/jammind/phonegap-plugin-multiview</repo>
+    <issue>https://github.com/jammind/phonegap-plugin-multiview/issues</issue>
 
     <js-module src="www/multiview.js" name="multiview">
         <clobbers target="PGMultiView" />
