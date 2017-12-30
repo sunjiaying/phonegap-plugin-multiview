@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/purplecabbage/phonegap-plugin-multiview"
+    "url": "https://github.com/jammind/phonegap-plugin-multiview"
   },
   "keywords": [
     "cordova",
