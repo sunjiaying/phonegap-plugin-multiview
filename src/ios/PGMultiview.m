@@ -25,6 +25,30 @@
     return YES;
 }
 
+/*
+ 重写CDVViewController方法，这样就可以根据自己的需要加载插件了
+ 这里是不加载 CDVSplashScreen 这个插件
+ */
+- (void)registerPlugin:(CDVPlugin*)plugin withClassName:(NSString*)className
+{
+    if([className isEqualToString:@"插件CDVSplashScreen"]){
+        return;
+    }
+    [super registerPlugin:plugin withClassName:className];
+}
+
+/*
+ 重写这个插件不管用，不能达到阻止加载相应插件的功能
+ */
+-(void)registerPlugin:(CDVPlugin *)plugin withPluginName:(NSString *)pluginName
+{
+    NSString* className = NSStringFromClass([plugin class]);
+    if([className isEqualToString:@"splashscreen"]){
+        return;
+    }
+    [super registerPlugin:plugin withPluginName:pluginName];
+}
+
 @end
 
 
