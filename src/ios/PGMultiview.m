@@ -31,7 +31,7 @@
  */
 - (void)registerPlugin:(CDVPlugin*)plugin withClassName:(NSString*)className
 {
-    if([className isEqualToString:@"插件CDVSplashScreen"]){
+    if([className isEqualToString:@"CDVSplashScreen"]){
         return;
     }
     [super registerPlugin:plugin withClassName:className];
