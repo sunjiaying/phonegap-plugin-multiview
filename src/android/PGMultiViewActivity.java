@@ -10,6 +10,19 @@ public class PGMultiViewActivity extends CordovaActivity {
     public String message;
 
     @Override
+    protected void loadConfig() {
+        super.loadConfig();
+        for(int i=0; i<pluginEntries.size(); i++) {
+            PluginEntry pe = pluginEntries.get(i);
+            if (pe.service.equals("SplashScreen")) {
+                pluginEntries.remove(pe);
+            } else if (pe.service.equals("HotCodePush")) {
+                pluginEntries.remove(pe);
+            }
+        }
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
