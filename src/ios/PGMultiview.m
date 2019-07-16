@@ -33,6 +33,8 @@
 {
     if([className isEqualToString:@"CDVSplashScreen"]){
         return;
+    } else if([className isEqualToString:@"HCPPlugin"]){
+        return;
     }
     [super registerPlugin:plugin withClassName:className];
 }
