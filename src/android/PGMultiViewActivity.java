@@ -4,6 +4,7 @@ package phonegap.pgmultiview;
         import org.apache.cordova.CordovaActivity;
         import android.content.Intent;
         import android.app.Activity;
+        import org.apache.cordova.PluginEntry;
 
 public class PGMultiViewActivity extends CordovaActivity {
 
