@@ -23,9 +23,9 @@
                 <param name="android-package" value="phonegap.pgmultiview.PGMultiView"/>
             </feature>
         </config-file>
-
+        
         <config-file target="AndroidManifest.xml" parent="application">
-            <activity android:name="phonegap.pgmultiview.PGMultiViewActivity"
+            <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:name="phonegap.pgmultiview.PGMultiViewActivity"
                       android:label="PGMultiViewActivity" >
             </activity>
         </config-file>
